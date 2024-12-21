@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Card = () => {
-  const [leetcodeId, setLeetcodeId] = useState(""); // State to manage input value
+  const [leetcodeId, setLeetcodeId] = useState(""); 
   return (
     <div className="absolute h-96 w-96  ">
       <div className="max-w-lg mx-auto p-6 bg-gradient-to-b from-gray-900 to-black rounded-xl shadow-lg border border-gray-700 ">

@@ -47,7 +47,7 @@ export function Chart({ userData }: any) {
       return (
         <div
           key={day}
-          className={`w-4 h-4  ${getColorClass(count)} m-1 `}
+          className={`w-2 h-2  ${getColorClass(count)} m-1 `}
           title={`${date.toDateString()}: ${count} submissions`}
         ></div>
       );
@@ -73,8 +73,8 @@ export function Chart({ userData }: any) {
   }
 
   return (
-    <div className="bg-blue-400 p-2  rounded-lg h-56">
-      <h2 className=" font-bold mb-1 text-black">Submission Heatmap</h2>
+    <div className="bg-transparent p-2  rounded-lg h-56 overflow-hidden mb-1">
+      <h2 className=" font-bold mb-4 text-white text-4xl">Submission Heatmap</h2>
       <div className="flex flex-wrap">{renderHeatmap()}</div>
     </div>
   );
