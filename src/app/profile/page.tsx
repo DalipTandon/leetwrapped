@@ -28,7 +28,7 @@ export function UserProfile() {
         setUserData(data);
       })
       .catch((error) => {
-       // console.error("Error fetching user details:", error);
+       console.error("Error fetching user details:", error);
       })
       .finally(() => {
         setLoading(false);
@@ -56,7 +56,7 @@ export function UserProfile() {
           link.click();
         })
         .catch((err) => {
-         // console.error("Error generating image:", err);
+          console.error("Error generating image:", err);
         });
     }
   };
