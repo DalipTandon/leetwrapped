@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const Card = () => {
+export default function Card(){
   const [leetcodeId, setLeetcodeId] = useState(""); 
   return (
     <div className="absolute h-96 w-96  ">
@@ -32,4 +32,3 @@ const Card = () => {
   );
 };
 
-export default Card;

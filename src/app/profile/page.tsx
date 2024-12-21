@@ -13,7 +13,7 @@ async function getUserDetails(leetcodeId) {
   return response.data;
 }
 
-export function UserProfile() {
+export default  function UserProfile() {
   const searchParams = useSearchParams();
   const leetcodeId = searchParams.get("leetcodeId");
   const [userData, setUserData] = useState(null);
@@ -90,4 +90,3 @@ export function UserProfile() {
   );
 }
 
-export default UserProfile;
