@@ -47,8 +47,8 @@ export function UserProfile() {
      <div className="bg-[#111111] h-5/6 w-3/6 mt-5 rounded-lg p-6 absolute">
             <h5 className="text-white text-center text-2xl">{leetcodeId}</h5>
             <p className="bg-gradient-to-r from-purple-600 to-blue-400 text-transparent bg-clip-text text-center">leetcode wrapped 2024</p>
-            <div>
-                <Chart/>
+            <div >
+                <Chart userData={userData}/>
             </div>
             <div>
                 <Content data={userData}/>
