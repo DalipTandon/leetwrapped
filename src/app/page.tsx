@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import { BackgroundBeams } from "./components/ui/background-beams";
 import Card from "./auth/page";
 

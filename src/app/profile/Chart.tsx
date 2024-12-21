@@ -6,7 +6,6 @@ export function Chart({ userData }: any) {
 
   const [submissionData, setSubmissionData] = useState(submissionCalendar || {});
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
 // console.log(submissionCalendar);
 // console.log(setSubmissionData);
 
@@ -17,7 +16,7 @@ export function Chart({ userData }: any) {
       setSubmissionData(submissionCalendar);
      // console.log("Submission Calendar:", submissionCalendar);  
     }
-  }, []);
+  }, [submissionCalendar]);
 
   const getColorClass = (count: number): string => {
   //  console.log("Count:", count);
@@ -37,7 +36,7 @@ export function Chart({ userData }: any) {
     return days.map((day) => {
       const timestamp = parseInt(day, 10);
       if (isNaN(timestamp)) {
-        console.error(`Invalid timestamp: ${day}`);
+       // console.error(`Invalid timestamp: ${day}`);
         return null;
       }
 
@@ -63,14 +62,7 @@ export function Chart({ userData }: any) {
     );
   }
 
-  if (error) {
-    return (
-      <div className="bg-red-400 p-4 rounded-lg">
-        <h2 className="text-white font-bold mb-4">Submission Heatmap</h2>
-        <p className="text-white">{error}</p>
-      </div>
-    );
-  }
+
 
   return (
     <div className="bg-transparent p-2  rounded-lg h-56 overflow-hidden mb-1">
