@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export function Chart({ userData }: any) {
+export function Chart({ userData }) {
   const submissionCalendar = userData?.submissionCalendar;
 
   const [submissionData, setSubmissionData] = useState(submissionCalendar || {});

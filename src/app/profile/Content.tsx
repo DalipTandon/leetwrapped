@@ -1,6 +1,6 @@
 
 
-const Content=({data}:any)=>{
+const Content=({data})=>{
     const{ranking,totalSolved,totalQuestions,easySolved,totalEasy,mediumSolved,totalMedium,hardSolved,totalHard,contributionPoints}=data;
     
     return(

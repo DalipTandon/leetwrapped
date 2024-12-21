@@ -8,7 +8,7 @@ import html2canvas from "html2canvas";  // Import html2canvas
 import Chart from "./Chart";
 import Content from "./Content";
 
-async function getUserDetails(leetcodeId: any) {
+async function getUserDetails(leetcodeId) {
   const response = await axios.get("https://leetcode-stats-api.herokuapp.com/" + leetcodeId);
   return response.data;
 }
@@ -16,9 +16,8 @@ async function getUserDetails(leetcodeId: any) {
 export function UserProfile() {
   const searchParams = useSearchParams();
   const leetcodeId = searchParams.get("leetcodeId");
-  const [userData, setUserData] = useState<any>(null);
+  const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<any>(null);
 
   useEffect(() => {
     if (!leetcodeId) {
@@ -29,8 +28,7 @@ export function UserProfile() {
         setUserData(data);
       })
       .catch((error) => {
-        console.error("Error fetching user details:", error);
-        setError(error);
+       // console.error("Error fetching user details:", error);
       })
       .finally(() => {
         setLoading(false);
@@ -58,7 +56,7 @@ export function UserProfile() {
           link.click();
         })
         .catch((err) => {
-          console.error("Error generating image:", err);
+         // console.error("Error generating image:", err);
         });
     }
   };
